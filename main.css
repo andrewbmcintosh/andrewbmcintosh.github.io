@@ -1,0 +1,22 @@
+body {
+    margin: 0;
+}
+
+parallax-container {
+    display: block;
+    height: 300px;
+}
+
+#parallax-container div {
+    position: fixed;
+    top: 0;
+    background-position: center !important;
+    transform: translateY(0px);
+    height: 300px;
+    width: 100%;
+}
+
+#content {
+    position: relative;
+    padding: 100px;
+}

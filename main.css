@@ -1,25 +1,60 @@
-#hero {
-    height: 800px;
-    overflow: hidden;
+.parallax {
+    perspective: 1px;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -ms-perspective-origin-x: 100%;
+}
+
+.parallax__layer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    -ms-transform-origin-x: 100%;
+}
+.parallax__layer--base {
+    transform: translateZ(0);
+    background-image: 'img/pane_3.png';
+}
+.parallax__layer--back {
+    transform: translateZ(-1px) scale(2);
+    background-image: 'img/pane_2.png';
+
+}
+
+.parallax__layer--deep {
+    transform: translateZ(-2px) scale(3);
+    background-image: 'img/pane_1.png';
+
+}
+.parallax__group {
     position: relative;
+    height: 100vh;
+    transform-style: preserve-3d;
 }
 
-.layer {
-    background-position: auto;
-    background-size: auto;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 800px;
-    position: fixed;
-    z-index: -1;
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
 }
 
-.layer-01 {
-    background-image: src 'img/pane_3.png';
+li {
+    float: left;
 }
-.layer-02 {
-    background-image: url('img/pane_2.png');
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
 }
-.layer-03 {
-    background-image: url('img/pane_1.png');
+
+li a:hover {
+    background-color: #111;
 }
